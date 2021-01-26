@@ -5,47 +5,61 @@ class Worker
 	public $age;
 	public $name;
 	public $salary;
+	public $min_age = 18;
+	public $max_age = 70;
+	public $range_age = ['min_age' => 18, 'max_age' => 70];
 
 	public function __construct($age, $name, $salary)
 	{
 		$this->age = $age;
 		$this->name = $name;
 		$this->salary = $salary;
+		echo $this->checkAge5() . $this->name . '<hr>';
 	}
 
 	//Вариант 1
 	public function checkAge()
 	{
-		if ($this->age <= 70 & $this->age >= 18) {
-			$valid = 'Валидный возраст ' . $this->age;
+		if ($this->age <= $this->max_age & $this->age >= $this->min_age) {
+			$validAge = 'Валидный возраст ';
 		} else {
-			$valid = 'Не валидный возраст ' . $this->age;
+			$validAge = 'Не валидный возраст ';
 		}
 
-		return $valid;
+		return $validAge;
 	}
 
 	// Вариант 2
 	public function checkAge2()
 	{
-		$valid = $this->age >= 17 & $this->age <= 70 ? 'Валидный возраст ' : 'Не валидный возраст ';
-		return $valid;
+		$validAge = $this->age >= $this->min_age & $this->age <= $this->max_age ? 'Валидный возраст ' : 'Не валидный возраст ';
+		return $validAge;
 	}
 
 	// Вариант 3
-	public function checkAge3($var)
+	public function checkAge3()
 	{
-		$minmaxAge = range(18, 70);
-		foreach ($minmaxAge as $key) {
-			if ($var === $key) return 'Валидный возраст ';
+		$rangeAge = range($this->min_age, $this->max_age);
+		foreach ($rangeAge as $key) {
+			if ($this->age === $key) return 'Валидный возраст ';
 		};
 		return 'Не валидный возраст ';
 	}
 
 	// Вариант 4
-	public function checkAge4($var)
+	public function checkAge4()
 	{
-		$valueToKey = array_flip(range(18, 70));
-		return array_key_exists($var, $valueToKey) ? 'Валидный возраст ' : 'Не валидный возраст ';
+		$rangeAge = array_flip(range($this->min_age, $this->max_age));
+		$validAge = array_key_exists($this->age, $rangeAge) ? 'Валидный возраст ' : 'Не валидный возраст ';
+		return $validAge;
+	}
+
+	// Вариант 5
+	public function checkAge5()
+	{
+		foreach ($this->range_age as $key) {
+			if ($this->age === $key) return 'Валидный возраст ';
+		};
+		return 'Не валидный возраст ';
 	}
 }
