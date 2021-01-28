@@ -5,11 +5,11 @@ class User
 	protected $name;
 	protected $age;
 
-	public function __construct($name, $age)
-	{
-		$this->setName($name);
-		$this->setAge($age);
-	}
+//	public function __construct($name, $age)
+//	{
+//		$this->setName($name);
+//		$this->setAge($age);
+//	}
 
 	public function getName()
 	{

@@ -4,11 +4,11 @@ class Worker extends User
 {
 	private $salary;
 
-	public function __construct($name, $age, $salary)
-	{
-		parent::__construct($name, $age);
-		$this->setSalary($salary);
-	}
+//	public function __construct($name, $age, $salary)
+//	{
+//		parent::__construct($name, $age);
+//		$this->setSalary($salary);
+//	}
 
 	public function getSalary()
 	{

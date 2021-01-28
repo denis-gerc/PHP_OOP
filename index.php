@@ -10,7 +10,17 @@ function debug($data)
 	echo '</pre>';
 }
 
-$obj1 = new Worker('Иван', 25, 1000);
-$obj2 = new Worker('Вася', 26, 2000);
+//$obj1 = new Worker('Иван', 25, 1000);
+//$obj2 = new Worker('Вася', 26, 2000);
+//$getSumSalary = $obj1->getSalary() + $obj2->getSalary();
+//echo "Сумма зарплат: {$getSumSalary}";
+
+$obj1 = new Worker();
+$obj1->setSalary(2000);
+
+$obj2 = new Worker();
+$obj2->setSalary(1000);
 $getSumSalary = $obj1->getSalary() + $obj2->getSalary();
 echo "Сумма зарплат: {$getSumSalary}";
+
+
