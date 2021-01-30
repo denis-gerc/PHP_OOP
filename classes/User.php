@@ -1,15 +1,16 @@
 <?php
 
-class User
+abstract class User
 {
+	const TEST = 10;
 	protected $name;
 	protected $age;
 
-//	public function __construct($name, $age)
-//	{
-//		$this->setName($name);
-//		$this->setAge($age);
-//	}
+	public function __construct($name, $age)
+	{
+		$this->name = $name;
+		$this->age = $age;
+	}
 
 	public function getName()
 	{
@@ -21,13 +22,16 @@ class User
 		$this->name = $name;
 	}
 
-	public function getAge(): int
+	public function getAge()
 	{
 		return $this->age;
 	}
 
-	public function setAge(int $age)
+	public function setAge($age)
 	{
-		$this->age = $age;
+		return $this->age = $age;
 	}
+
+	abstract protected function getText($text);
+
 }

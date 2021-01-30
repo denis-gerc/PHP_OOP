@@ -1,7 +1,9 @@
 <?php
 error_reporting(-1);
+
 require_once 'classes/User.php';
-require_once 'classes/Worker.php';
+require_once 'classes/Iinterface.php';
+require_once 'classes/Workers.php';
 
 function debug($data)
 {
@@ -10,17 +12,21 @@ function debug($data)
 	echo '</pre>';
 }
 
-//$obj1 = new Worker('Иван', 25, 1000);
-//$obj2 = new Worker('Вася', 26, 2000);
-//$getSumSalary = $obj1->getSalary() + $obj2->getSalary();
-//echo "Сумма зарплат: {$getSumSalary}";
+$obj1 = new Workers('Иван', 25, 1000);
+$obj2 = new Workers('Вася', 26, 2000);
 
-$obj1 = new Worker();
-$obj1->setSalary(2000);
+$obj1->setSalary(1500);
 
-$obj2 = new Worker();
-$obj2->setSalary(1000);
-$getSumSalary = $obj1->getSalary() + $obj2->getSalary();
-echo "Сумма зарплат: {$getSumSalary}";
+$sumSalary = $obj1->getSalary() + $obj2->getSalary();
+echo "Сумма зарплат: {$sumSalary}";
+
+echo "<br>" . $obj1->getText('Привет я наследую абстрактный метод');
+
+echo $obj1->test();
+
+
+
+
+
 
 
