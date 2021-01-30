@@ -5,13 +5,10 @@ class Workers extends User implements Iinterface
 	private $salary;
 	private $text;
 
-	public const TEST = 155;
-
 	public function __construct($name, $age, $salary)
 	{
 		parent::__construct($name, $age);
 		$this->salary = $salary;
-		debug(self::TEST);
 	}
 
 	public function getSalary(): int

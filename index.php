@@ -24,6 +24,22 @@ echo "<br>" . $obj1->getText('Привет я наследую абстракт�
 
 echo $obj1->test();
 
+debug($obj1);
+
+//----------------------------------//
+class A{};
+
+class B extends A{};
+
+class C{};
+
+$a = new A;
+$b = new B;
+$c = new C;
+
+debug($obj1 instanceof Iinterface);
+
+
 
 
 
