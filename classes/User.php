@@ -1,5 +1,7 @@
 <?php
 
+namespace classes;
+
 abstract class User
 {
 	const TEST = 10;

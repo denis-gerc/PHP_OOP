@@ -1,5 +1,7 @@
 <?php
 
+namespace classes\interfaces;
+
 interface Iinterface
 {
 	const TEST2 = '<br>Меня зовут интерфейс';

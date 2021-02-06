@@ -1,5 +1,8 @@
 <?php
 
+namespace classes;
+use classes\interfaces\Iinterface;
+
 class Workers extends User implements Iinterface
 {
 	private $salary;
@@ -9,6 +12,7 @@ class Workers extends User implements Iinterface
 	{
 		parent::__construct($name, $age);
 		$this->salary = $salary;
+//		var_dump(self::class);
 	}
 
 	public function getSalary(): int
@@ -28,7 +32,7 @@ class Workers extends User implements Iinterface
 
 	}
 
-	// parent interface
+	// parent interfaces
 	public function test()
 	{
 		return self::TEST2;
