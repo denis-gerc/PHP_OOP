@@ -18,30 +18,21 @@ $obj1->setSalary(1500);
 
 $sumSalary = $obj1->getSalary() + $obj2->getSalary();
 
-//echo "Сумма зарплат: {$sumSalary}";
+echo "Сумма зарплат: {$sumSalary}";
 
-//echo "<br>" . $obj1->getText('Привет я наследую абстрактный метод');
+echo "<br>" . $obj1->getText('Привет я наследую абстрактный метод');
 
-//echo $obj1->test();
+echo $obj1->test();
+echo $obj1;
+echo $obj1->test123 = "hello";
 
 $mail = new \PHPMailer\PHPMailer\PHPMailer();
 
-//debug($obj1);
+debug($obj1);
 
-$a =new \app\A();
-$b =new \app\B();
 
-$a->getTest();
-echo "<br>";
-$b->getTest();
-echo "<br>";
-$b->getTest2();
-echo "<br>";
 
-$obj1->doAction1()->doAction2();
-//$obj1->doAction2();
 
-//debug($obj1);
 
 
 
