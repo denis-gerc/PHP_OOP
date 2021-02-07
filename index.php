@@ -26,7 +26,7 @@ echo $obj1->test();
 
 $mail = new \PHPMailer\PHPMailer\PHPMailer();
 
-debug($mail);
+debug($obj1);
 
 
 

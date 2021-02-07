@@ -2,9 +2,11 @@
 
 namespace app;
 use core\interfaces\Iinterface;
+use core\traits\TColor;
 
 class Workers extends User implements Iinterface
 {
+	use TColor;
 	private $salary;
 	private $text;
 
