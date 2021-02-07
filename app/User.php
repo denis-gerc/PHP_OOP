@@ -1,6 +1,6 @@
 <?php
 
-namespace classes;
+namespace app;
 
 abstract class User
 {

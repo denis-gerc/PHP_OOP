@@ -1,7 +1,7 @@
 <?php
 
-namespace classes;
-use classes\interfaces\Iinterface;
+namespace app;
+use core\interfaces\Iinterface;
 
 class Workers extends User implements Iinterface
 {
