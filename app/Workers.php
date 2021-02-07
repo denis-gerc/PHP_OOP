@@ -9,6 +9,8 @@ class Workers extends User implements Iinterface
 	use TColor;
 	private $salary;
 	private $text;
+	public $action1;
+	public $action2;
 
 	public function __construct($name, $age, $salary)
 	{
@@ -38,5 +40,15 @@ class Workers extends User implements Iinterface
 	public function test()
 	{
 		return self::TEST2;
+	}
+
+	public function doAction1(){
+		echo $this->action1="<p>Выполнили действие 1</p>";
+		return $this;
+	}
+
+	public function doAction2(){
+		echo $this->action1="<p>Выполнили действие 2</p>";
+		return $this;
 	}
 }
