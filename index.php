@@ -1,7 +1,6 @@
 <?php
 error_reporting(-1);
 
-use app\Workers;
 require_once __DIR__ . '/vendor/autoload.php';
 
 function debug($data)
@@ -11,24 +10,36 @@ function debug($data)
 	echo '</pre>';
 }
 
-$obj1 = new Workers('Иван', 25, 1000);
-$obj2 = new Workers('Вася', 26, 2000);
+$Db = \app\Db::getInstance();
 
-$obj1->setSalary(1500);
+$Db->sqlDb('mysql:host=localhost;dbname=php_oop', 'root', 'root');
 
-$sumSalary = $obj1->getSalary() + $obj2->getSalary();
+$Db->connectDb();
 
-echo "Сумма зарплат: {$sumSalary}";
+// Выборка SELECT : array()
+$query = "SELECT `name` FROM messages WHERE `id_message` = ?";
+$params = [2];
+debug($Db->sqlSelect($query, $params));
 
-echo "<br>" . $obj1->getText('Привет я наследую абстрактный метод');
+// Обновление Update : bool
+$name = 'DenisGerc';
+$id=3;
 
-echo $obj1->test();
-echo $obj1;
-echo $obj1->test123 = "hello";
+$query = "UPDATE `messages` SET `name` = :name WHERE `id_message` = :id";
 
-$mail = new \PHPMailer\PHPMailer\PHPMailer();
+$params = [
+	':id' => $id,
+	':name' => $name
+];
 
-debug($obj1);
+debug($Db->sqlQuery($query, $params));
+
+$Db1 = \app\Db::getInstance();
+
+// Один и тот же объект $Db b $Db1
+debug($Db);
+debug($Db1);
+
 
 
 

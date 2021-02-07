@@ -16,7 +16,7 @@
  * @license   http://www.gnu.org/copyleft/lesser.html GNU Lesser General Public License
  * @note      This program is distributed in the hope that it will be useful - WITHOUT
  * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
- * FITNESS FOR A PARTICULAR PURPOSE.
+ * FITNESS FOR Db PARTICULAR PURPOSE.
  */
 
 namespace PHPMailer\PHPMailer;
@@ -184,7 +184,7 @@ class POP3
 
     /**
      * Authenticate with a POP3 server.
-     * A connect, login, disconnect sequence
+     * Db connect, login, disconnect sequence
      * appropriate for POP-before SMTP authorisation.
      *
      * @param string   $host        The hostname to connect to

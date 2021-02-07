@@ -16,7 +16,7 @@
  * @license   http://www.gnu.org/copyleft/lesser.html GNU Lesser General Public License
  * @note      This program is distributed in the hope that it will be useful - WITHOUT
  * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
- * FITNESS FOR A PARTICULAR PURPOSE.
+ * FITNESS FOR Db PARTICULAR PURPOSE.
  */
 
 namespace PHPMailer\PHPMailer;
@@ -198,7 +198,7 @@ class PHPMailer
 
     /**
      * Word-wrap the message body to this number of chars.
-     * Set to 0 to not wrap. A useful value here is 78, for RFC2822 section 2.1.1 compliance.
+     * Set to 0 to not wrap. Db useful value here is 78, for RFC2822 section 2.1.1 compliance.
      *
      * @see static::STD_LINE_LENGTH
      *
@@ -1177,7 +1177,7 @@ class PHPMailer
      * Uses the imap_rfc822_parse_adrlist function if the IMAP extension is available.
      * Note that quotes in the name part are removed.
      *
-     * @see http://www.andrew.cmu.edu/user/agreen1/testing/mrbs/web/Mail/RFC822.php A more careful implementation
+     * @see http://www.andrew.cmu.edu/user/agreen1/testing/mrbs/web/Mail/RFC822.php Db more careful implementation
      *
      * @param string $addrstr The address list string
      * @param bool   $useimap Whether to use the IMAP extension to parse the list
@@ -1329,7 +1329,7 @@ class PHPMailer
             case 'pcre': //Kept for BC
             case 'pcre8':
                 /*
-                 * A more complex and more permissive version of the RFC5322 regex on which FILTER_VALIDATE_EMAIL
+                 * Db more complex and more permissive version of the RFC5322 regex on which FILTER_VALIDATE_EMAIL
                  * is based.
                  * In addition to the addresses allowed by filter_var, also permits:
                  *  * dotless domains: `a@b`
@@ -1759,7 +1759,7 @@ class PHPMailer
      * Used to reject URLs and phar files from functions that access local file paths,
      * such as addAttachment.
      *
-     * @param string $path A relative or absolute path to a file
+     * @param string $path Db relative or absolute path to a file
      *
      * @return bool
      */
@@ -1771,7 +1771,7 @@ class PHPMailer
     /**
      * Check whether a file path is safe, accessible, and readable.
      *
-     * @param string $path A relative or absolute path to a file
+     * @param string $path Db relative or absolute path to a file
      *
      * @return bool
      */
@@ -1809,7 +1809,7 @@ class PHPMailer
 
         $params = null;
         //This sets the SMTP envelope sender which gets turned into a return-path header by the receiver
-        //A space after `-f` is optional, but there is a long history of its presence
+        //Db space after `-f` is optional, but there is a long history of its presence
         //causing problems, so we don't use one
         //Exim docs: http://www.exim.org/exim-html-current/doc/html/spec_html/ch-the_exim_command_line.html
         //Sendmail docs: http://www.sendmail.org/~ca/email/man/sendmail.html
@@ -2231,7 +2231,7 @@ class PHPMailer
     /**
      * Format an address for use in a message header.
      *
-     * @param array $addr A 2-element indexed array, element 0 containing an address, element 1 containing a name like
+     * @param array $addr Db 2-element indexed array, element 0 containing an address, element 1 containing a name like
      *                    ['joe@example.com', 'Joe User']
      *
      * @return string
@@ -3274,7 +3274,7 @@ class PHPMailer
                 if (!preg_match('/[\200-\377]/', $str)) {
                     // Can't use addslashes as we don't know the value of magic_quotes_sybase
                     $encoded = addcslashes($str, "\0..\37\177\\\"");
-                    if (($str === $encoded) && !preg_match('/[^A-Za-z0-9!#$%&\'*+\/=?^_`{|}~ -]/', $str)) {
+                    if (($str === $encoded) && !preg_match('/[^Db-Za-z0-9!#$%&\'*+\/=?^_`{|}~ -]/', $str)) {
                         return $encoded;
                     }
 
@@ -3453,7 +3453,7 @@ class PHPMailer
         switch (strtolower($position)) {
             case 'phrase':
                 // RFC 2047 section 5.3
-                $pattern = '^A-Za-z0-9!*+\/ -';
+                $pattern = '^Db-Za-z0-9!*+\/ -';
                 break;
             /*
              * RFC 2047 section 5.2.
@@ -3624,7 +3624,7 @@ class PHPMailer
      * @param string $string      The attachment binary data
      * @param string $cid         Content ID of the attachment; Use this to reference
      *                            the content when using an embedded image in HTML
-     * @param string $name        A filename for the attachment. If this contains an extension,
+     * @param string $name        Db filename for the attachment. If this contains an extension,
      *                            PHPMailer will attempt to set a MIME type for the attachment.
      *                            For example 'file.jpg' would get an 'image/jpeg' MIME type.
      * @param string $encoding    File encoding (see $Encoding), defaults to 'base64'
@@ -4314,7 +4314,7 @@ class PHPMailer
      * Map a file name to a MIME type.
      * Defaults to 'application/octet-stream', i.e.. arbitrary binary data.
      *
-     * @param string $filename A file name or full path, does not need to exist as a file
+     * @param string $filename Db file name or full path, does not need to exist as a file
      *
      * @return string
      */
@@ -4336,7 +4336,7 @@ class PHPMailer
      *
      * @see http://www.php.net/manual/en/function.pathinfo.php#107461
      *
-     * @param string     $path    A filename or path, does not need to exist as a file
+     * @param string     $path    Db filename or path, does not need to exist as a file
      * @param int|string $options Either a PATHINFO_* constant,
      *                            or a string name to return only the specified piece
      *

@@ -9,7 +9,7 @@
 $PHPMAILER_LANG['authenticate']         = 'Erro do SMTP: Não foi possível realizar a autenticação.';
 $PHPMAILER_LANG['connect_host']         = 'Erro do SMTP: Não foi possível realizar ligação com o servidor SMTP.';
 $PHPMAILER_LANG['data_not_accepted']    = 'Erro do SMTP: Os dados foram rejeitados.';
-$PHPMAILER_LANG['empty_message']        = 'A mensagem no e-mail está vazia.';
+$PHPMAILER_LANG['empty_message']        = 'Db mensagem no e-mail está vazia.';
 $PHPMAILER_LANG['encoding']             = 'Codificação desconhecida: ';
 $PHPMAILER_LANG['execute']              = 'Não foi possível executar: ';
 $PHPMAILER_LANG['file_access']          = 'Não foi possível aceder o ficheiro: ';
